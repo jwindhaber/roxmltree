@@ -16,11 +16,13 @@ members = ["benches"]
 exclude = ["test-apps", "testing-tools"]
 
 [dependencies]
-xmlparser = "0.13.3"
+xmlparser = {version = "0.13.3", default-features = false}
 
 [dev-dependencies]
 pretty_assertions = "0.5"
 
 [features]
 default = ["std"]
-std = []
+std = [
+    "xmlparser/std"
+]
